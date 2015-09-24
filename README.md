@@ -4,4 +4,4 @@
 
 
 Referências:
-* http://simplesideias.com.br/design-patterns-no-javascript-module
+* [Simples Ideias](http://simplesideias.com.br/design-patterns-no-javascript-module)
