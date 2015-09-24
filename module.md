@@ -18,5 +18,4 @@ Injeção de dependência (JQuery)
 
 **Funções podem ser executadas e receber parâmetros.**
 
-Implementação que é muito simples quebrar o encapsulamento e manipular o attributo ### Counter.count
-diretamente.
+Implementação que é muito simples quebrar o encapsulamento e manipular o atributo ```Counter.count``` diretamente.
