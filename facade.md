@@ -1,53 +1,15 @@
-**Permite organizar o código sem expor as variáveis globais.**
+**Padrão simples que é extremamente útil e poderoso.**
 
-Executa a função imediatamente ápós sua definição
-
-```bash
-(function(){
-	// alert('module')
-})
-```
-
-Injeção de dependência (JQuery)
+O padrão Facade tem como objetivo escoder a complexidade do código. Ele provém uma interface unificada para um conjunto de subsistemas.
 
 ```bash
-(function($){
-  // alert('module')
-})(jQuery);
-```
-
-**Funções podem ser executadas e receber parâmetros.**
-
-Implementação que é muito simples quebrar o encapsulamento e manipular o atributo ```Counter.count``` diretamente.
-
-```bash
-var Counter = {
-	count: 0,
-  increment: function() {
-    return this.count += 1;
+function addEvent(element, event, callback) {  
+  if(window.addEventListener) {
+    element.addEventListener(event, callback, false);
+  } else if(document.attachEvent) {
+    element.attachEvent('on' + event, callback);
+  } else {
+    element['on' + event] = callback;
   }
-};
-
-Counter.increment();
-Counter.increment();
-Counter.increment();
-Counter.count; // Imprime 3
-Counter.count = 10;
-Counter.count; // Imprime 10
-```
-
-Mesma implementação utilizando o padrão Module. Neste caso é encapsulado todo o seu comportamento.
-
-```bash
-var Counter = (function(){
-  var count = 0;
-  return {
-    count: function() {
-      return count;
-    },
-    increment: function() {
-      return count += 1;
-    }
-  };
-})();
+}
 ```
