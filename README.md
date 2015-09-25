@@ -5,4 +5,5 @@
 
 
 Referências:
-* [Simples Ideias](http://simplesideias.com.br/design-patterns-no-javascript-module)
+* [simplesideias.com.br](http://simplesideias.com.br/design-patterns-no-javascript-module)
+* [carldanley.com](https://carldanley.com/js-facade-pattern/)
